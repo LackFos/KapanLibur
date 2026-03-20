@@ -28,7 +28,7 @@ class ApiClient {
             throw URLError(.cannotParseResponse)
         }
         
-        if httpResponse.statusCode != 200 {
+        if !(200...299).contains(httpResponse.statusCode) {
             throw URLError(.badServerResponse)
         }
         
