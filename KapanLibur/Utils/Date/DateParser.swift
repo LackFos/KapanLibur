@@ -10,6 +10,6 @@ import Foundation
 func DateParser(_ dateString: String) -> Date? {
     let formatter = DateFormatter()
     formatter.dateFormat = "yyyy-MM-dd"
-    formatter.timeZone = TimeZone(secondsFromGMT: 0)
+    formatter.timeZone = TimeZone(identifier: "Asia/Jakarta")
     return formatter.date(from: dateString)
 }
