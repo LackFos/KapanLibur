@@ -43,9 +43,11 @@ class SecondComponent: TimeComponent {
 class CountDown: ObservableObject {
     @Published var secondRemains: TimeInterval
     
+    private var date: Date
     private var timer: Timer?
     
     init(date: Date) {
+        self.date = date
         self.secondRemains = date.timeIntervalSinceNow
     }
     
@@ -57,7 +59,8 @@ class CountDown: ObservableObject {
         stop()
         
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            self.secondRemains -= 1
+            let newSecondRemains = self.date.timeIntervalSince(Date())
+            self.secondRemains = max(0, newSecondRemains)
             
             if self.secondRemains <= 0 {
                 self.secondRemains = 0
