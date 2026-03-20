@@ -59,7 +59,8 @@ class CountDown: ObservableObject {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             self.secondRemains -= 1
             
-            if self.secondRemains == 0 {
+            if self.secondRemains <= 0 {
+                self.secondRemains = 0
                 self.stop()
             }
         }
