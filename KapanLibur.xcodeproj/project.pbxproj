@@ -64,6 +64,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"Extensions/Color+Extension.swift",
+				"Extensions/View+Extension.swift",
 			);
 			target = 147A89EB2F6D9664004B9386 /* NextHolidayWidgetExtension */;
 		};
