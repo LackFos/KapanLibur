@@ -65,6 +65,10 @@
 			membershipExceptions = (
 				"Extensions/Color+Extension.swift",
 				"Extensions/View+Extension.swift",
+				Models/Holiday.swift,
+				Networking/ApiClient.swift,
+				Services/HolidayService.swift,
+				Utils/Date/DateParser.swift,
 			);
 			target = 147A89EB2F6D9664004B9386 /* NextHolidayWidgetExtension */;
 		};
